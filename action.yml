@@ -28,6 +28,9 @@ inputs:
   reviewdog_flags:
     description: 'Additional reviewdog flags'
     default: ''
+  clippy_flags:
+    description: Additional clippy flags
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'

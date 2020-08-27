@@ -7,7 +7,7 @@ fi
 
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
-cargo clippy --message-format json 2>&1 | clippy-reviewdog-filter \
+cargo clippy --message-format json ${INPUT_CLIPPY_FLAGS} 2>&1 | clippy-reviewdog-filter \
   | reviewdog -f=checkstyle \
       -name="clippy" \
       -reporter="${INPUT_REPORTER:-github-pr-check}" \
