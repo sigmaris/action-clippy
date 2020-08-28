@@ -1,12 +1,12 @@
-FROM rust:alpine3.12
+FROM rust:1-buster
 
 ENV REVIEWDOG_VERSION=v0.10.2
 ENV CLIPPY_FILTER_VERSION=v0.1.1
 
-SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
+SHELL ["/bin/bash", "-eo", "pipefail", "-c"]
 
 # hadolint ignore=DL3006
-RUN apk --no-cache add git
+RUN apt-get install -y git
 
 RUN rustup component add clippy
 
