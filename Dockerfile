@@ -1,6 +1,6 @@
 FROM rust:1-buster
 
-ENV REVIEWDOG_VERSION=v0.10.2
+ENV REVIEWDOG_VERSION=v0.11.0
 ENV CLIPPY_FILTER_VERSION=v0.1.1
 
 SHELL ["/bin/bash", "-eo", "pipefail", "-c"]
